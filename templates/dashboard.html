@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>{{ page }}</h2>
+    <p>Live values from the backend API.</p>
+    <ul>
+        <li>Total sales: ${{ summary.total_sales }}</li>
+        <li>Orders: {{ summary.orders }}</li>
+        <li>Customers: {{ summary.customers }}</li>
+        <li>Inventory items: {{ summary.inventory_items }}</li>
+    </ul>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>{{ page }}</h2>
+    <p>Inventory data from the backend API.</p>
+    <ul>
+        {% for item in inventory %}
+        <li>{{ item.name }} ({{ item.sku }}) - Stock: {{ item.stock }} - Price: ${{ item.price }}</li>
+        {% empty %}
+        <li>No inventory available.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

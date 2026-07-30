@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>{{ page }}</h2>
+    <p>Recent orders retrieved from the backend API.</p>
+    <ul>
+        {% for order in orders %}
+        <li>Order #{{ order.id }} - {{ order.customer }} - ${{ order.amount }} - {{ order.status }}</li>
+        {% empty %}
+        <li>No orders available.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

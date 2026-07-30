@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="card">
+    <h2>{{ page }}</h2>
+    <p>Customer data served by the backend API.</p>
+    <ul>
+        {% for customer in customers %}
+        <li>{{ customer.name }} - {{ customer.email }} - {{ customer.city }}</li>
+        {% empty %}
+        <li>No customers available.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
