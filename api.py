@@ -66,3 +66,6 @@ def customers():
 @app.get("/inventory")
 def inventory():
     return get_inventory()
+
+
+print("completed")
